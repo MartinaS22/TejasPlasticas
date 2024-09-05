@@ -1,0 +1,98 @@
+body {
+    background-color: #F5F5F5;
+    margin: 0; /* Eliminar margen predeterminado del cuerpo */
+    font-family: Montserrat, sans-serif; /* Aplica la fuente "letra" a todo el cuerpo del documento */
+}
+    
+header{
+    background-color: rgb(255, 255, 255);
+    width: 100%; /* Ancho completo */
+    overflow: hidden;
+    padding: 0px; /* Añadido espacio alrededor de la barra de navegación */
+}
+    
+.barra {
+    display: flex; /* Utilizamos flexbox para alinear elementos */
+    align-items: center; /* Centramos verticalmente los elementos */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    padding: 0 20px; /* Espaciado alrededor de los elementos dentro de la barra */
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around; /* Distribuye espacio uniformemente entre los elementos hijos */
+    flex-grow: 1; /* Hace que los botones crezcan para ocupar el espacio sobrante */
+    text-align: center; /* Centra el texto en los botones */
+}
+
+.botones a {
+    flex: 1; /* Hace que cada enlace se expanda igualmente */
+    font-size: 20px;
+    padding: 15px; /* Agrega un poco de espacio alrededor del texto */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #0e2f4f; /* Color del texto de los botones */
+}
+    
+.izquierda{
+    display: flex;
+    align-items: left;
+}
+    
+.izquierda h1{
+    color:#0e2f4f;
+    font-size: 25px;
+    font-weight:900;
+    line-height: 50px;
+}
+    
+.barra img {
+    height: 70px; /* Altura del logo */
+    padding: 10px; /* Espaciado alrededor del logo */
+}
+    
+
+.banner {
+    background-color: #0e2f4f;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 50px 0; /* Añade espacio en la parte superior e inferior */
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.titulo {
+    margin-bottom: 10px; /* Reduce el espacio entre los elementos del texto */
+    text-align: left; /* Centra el texto horizontalmente */
+    padding: 0px 80px;
+}
+
+.banner h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 5px; /* Ajusta el margen inferior para reducir la distancia con el párrafo */
+}
+
+.banner p {
+    font-size: 80px;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-top: 0; /* Elimina el margen superior para reducir la distancia con el h2 */
+}
+
+.banner img {
+    padding: 20px; /* Espaciado alrededor de la imagen */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+}
+
+footer {
+    background-color: #232e2a;
+    text-align: center; /* Centrar el texto horizontalmente */
+    padding: 5px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Añadir una ligera sombra para la separación visual */
+    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+    font-size: 14px; /* Ajustar el tamaño de la letra si es necesario */
+    opacity: 0.75; /* Ajusta el nivel de transparencia según tu preferencia */
+    color: #ffffff;
+}
