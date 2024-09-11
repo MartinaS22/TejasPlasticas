@@ -1,98 +1,197 @@
 body {
-    background-color: #F5F5F5;
-    margin: 0; /* Eliminar margen predeterminado del cuerpo */
-    font-family: Montserrat, sans-serif; /* Aplica la fuente "letra" a todo el cuerpo del documento */
+    background-color: #d1d1d1;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
-    
-header{
+
+* {
+    box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
+}
+
+header {
     background-color: rgb(255, 255, 255);
-    width: 100%; /* Ancho completo */
+    width: 100%;
     overflow: hidden;
-    padding: 0px; /* Añadido espacio alrededor de la barra de navegación */
+    padding: 0;
 }
-    
+
 .barra {
-    display: flex; /* Utilizamos flexbox para alinear elementos */
-    align-items: center; /* Centramos verticalmente los elementos */
-    justify-content: space-between; /* Espacio uniforme entre los elementos */
-    padding: 0 20px; /* Espaciado alrededor de los elementos dentro de la barra */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    max-width: 100%;
 }
 
 .botones {
     display: flex;
-    justify-content: space-around; /* Distribuye espacio uniformemente entre los elementos hijos */
-    flex-grow: 1; /* Hace que los botones crezcan para ocupar el espacio sobrante */
-    text-align: center; /* Centra el texto en los botones */
+    justify-content: space-around;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .botones a {
-    flex: 1; /* Hace que cada enlace se expanda igualmente */
+    flex: 1;
     font-size: 20px;
-    padding: 15px; /* Agrega un poco de espacio alrededor del texto */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #0e2f4f; /* Color del texto de los botones */
+    padding: 15px;
+    text-decoration: none;
+    color: #0e2f4f;
 }
-    
-.izquierda{
+
+.izquierda {
     display: flex;
     align-items: left;
 }
-    
-.izquierda h1{
-    color:#0e2f4f;
+
+.izquierda h1 {
+    color: #0e2f4f;
     font-size: 25px;
-    font-weight:900;
+    font-weight: 900;
     line-height: 50px;
 }
-    
+
 .barra img {
-    height: 70px; /* Altura del logo */
-    padding: 10px; /* Espaciado alrededor del logo */
+    height: 70px;
+    padding: 10px;
 }
-    
 
 .banner {
     background-color: #0e2f4f;
-    position: relative;
     width: 100%;
-    overflow: hidden;
-    padding: 50px 0; /* Añade espacio en la parte superior e inferior */
     display: flex;
     flex-direction: column;
-    text-align: center; /* Centra el texto horizontalmente */
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .titulo {
-    margin-bottom: 10px; /* Reduce el espacio entre los elementos del texto */
-    text-align: left; /* Centra el texto horizontalmente */
-    padding: 0px 80px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .banner h2 {
     font-size: 20px;
     color: #ffffff;
-    margin-bottom: 5px; /* Ajusta el margen inferior para reducir la distancia con el párrafo */
+    margin-bottom: 10px;
 }
 
 .banner p {
-    font-size: 80px;
-    font-weight: bolder;
+    font-size: 50px;
     color: #ffffff;
-    margin-top: 0; /* Elimina el margen superior para reducir la distancia con el h2 */
+    margin-top: 0;
 }
 
 .banner img {
-    padding: 20px; /* Espaciado alrededor de la imagen */
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: block;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Para asegurar que el contenedor ocupa todo el ancho disponible */
+    padding: 20px 0; /* Espaciado vertical entre el contenido */
+}
+
+.contenido > div {
+    background-color: #ffffff;
+    border-radius: 10px; /* Bordes redondeados */
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+    padding: 30px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de tarjeta */
+}
+
+.contenido h3 {
+    color: #0e2f4f;
+    text-align: center;
+    font-size: 24px;
+}
+
+.contenido p {
+    text-align: justify;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column; /* Por defecto apila verticalmente */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centramos el contenedor */
+    line-height: 1; /* Ajusta el espaciado entre líneas */
+}
+
+.producto img {
+    max-width: 300px;
+    height: auto;
+}
+
+.parte1 {
+    display: flex;
+    flex-direction: column; /* Por defecto apila verticalmente */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centramos el contenedor */
+    line-height: 1; /* Ajusta el espaciado entre líneas */
+}
+
+.parte1 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio entre texto y el enlace */
+}
+
+.parte1 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Añadir márgenes para un mejor espaciado */
+}
+
+.parte1 img {
+    max-width: 500px;
+    border-radius: 10%;
+    height: auto;
+}
+
+/* Diseño responsivo */
+@media (min-width: 768px) {
+    .banner {
+        flex-direction: row;
+        padding: 50px;
+    }
+    .titulo {
+        margin: 0 20px;
+    }
+    .parte1 {
+        flex-direction: row; /* En pantallas grandes, el texto y la imagen estarán en fila */
+        align-items: flex-start; /* Alineación de los elementos al inicio para uniformidad */
+        justify-content: center; /* Centro del contenedor */
+    }
+
+    .parte1 div {
+        align-items: flex-start; /* Texto alineado a la izquierda en pantallas grandes */
+    }
+
+    .parte1 a {
+        margin-left: 20px; /* Espacio entre el texto y la imagen en pantallas grandes */
+    }
 }
 
 footer {
     background-color: #232e2a;
-    text-align: center; /* Centrar el texto horizontalmente */
+    text-align: center;
     padding: 5px 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Añadir una ligera sombra para la separación visual */
-    width: 100%; /* Asegura que el footer ocupe el ancho completo */
-    font-size: 14px; /* Ajustar el tamaño de la letra si es necesario */
-    opacity: 0.75; /* Ajusta el nivel de transparencia según tu preferencia */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-size: 14px;
+    opacity: 0.75;
     color: #ffffff;
 }
