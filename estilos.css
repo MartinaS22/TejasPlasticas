@@ -1,61 +1,70 @@
+/* General Styles */
 body {
     background-color: #d1d1d1;
     margin: 0;
     font-family: Montserrat, sans-serif;
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    overflow-x: hidden;
 }
 
 * {
-    box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
+    box-sizing: border-box;
+}
+
+/* Header and Footer */
+header, footer {
+    width: 100%;
+    overflow: hidden;
 }
 
 header {
     background-color: rgb(255, 255, 255);
-    width: 100%;
-    overflow: hidden;
-    padding: 0;
 }
 
+footer {
+    background-color: #232e2a;
+    text-align: center;
+    padding: 5px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+/* Navigation Bar */
 .barra {
     display: flex;
+    flex-wrap: wrap; /* Permite el ajuste en pantallas pequeñas */
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
-    max-width: 100%;
-}
-
-.botones {
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
-    text-align: center;
-}
-
-.botones a {
-    flex: 1;
-    font-size: 20px;
-    padding: 15px;
-    text-decoration: none;
-    color: #0e2f4f;
+    padding: 10px;
 }
 
 .izquierda {
     display: flex;
-    align-items: left;
+    align-items: center;
 }
 
-.izquierda h1 {
-    color: #0e2f4f;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 50px;
-}
-
-.barra img {
+.izquierda img {
     height: 70px;
     padding: 10px;
 }
 
+.botones {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.botones a {
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #0e2f4f;
+}
+
+/* Banner Styles */
 .banner {
     background-color: #0e2f4f;
     width: 100%;
@@ -63,49 +72,44 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
     text-align: center;
-}
-
-.titulo {
-    margin-bottom: 20px;
-    text-align: center;
+    padding: 20px;
 }
 
 .banner h2 {
-    font-size: 20px;
+    font-size: 1.0rem; /* Ajuste del tamaño de fuente */
     color: #ffffff;
     margin-bottom: 10px;
 }
 
 .banner p {
-    font-size: 50px;
+    font-size: 1.8rem; /* Ajuste del tamaño de fuente */
     color: #ffffff;
     margin-top: 0;
 }
 
 .banner img {
-    max-width: 100%;
+    max-width: 100%; /* Ajuste de la imagen al contenedor */
     height: auto;
     margin-top: 20px;
-    display: block;
 }
 
+/* Content Section */
 .contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Para asegurar que el contenedor ocupa todo el ancho disponible */
-    padding: 20px 0; /* Espaciado vertical entre el contenido */
+    width: 100%;
+    padding: 20px 0;
 }
 
 .contenido > div {
     background-color: #ffffff;
-    border-radius: 10px; /* Bordes redondeados */
-    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
-    padding: 30px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espacio entre las tarjetas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de tarjeta */
+    border-radius: 10px;
+    width: 90%;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contenido h3 {
@@ -114,84 +118,76 @@ header {
     font-size: 24px;
 }
 
-.contenido p {
-    text-align: justify;
-}
-
-.producto{
-    display: flex;
-    flex-direction: column; /* Por defecto apila verticalmente */
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; /* Centramos el contenedor */
-    line-height: 1; /* Ajusta el espaciado entre líneas */
-}
-
-.producto img {
-    max-width: 300px;
-    height: auto;
-}
-
+/* Parte 1 Styles */
 .parte1 {
-    display: flex;
-    flex-direction: column; /* Por defecto apila verticalmente */
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; /* Centramos el contenedor */
-    line-height: 1; /* Ajusta el espaciado entre líneas */
-}
-
-.parte1 div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px; /* Espacio entre texto y el enlace */
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 90%; /* Ajuste para evitar desbordamientos */
 }
 
-.parte1 a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0; /* Añadir márgenes para un mejor espaciado */
+.parte1 p {
+    font-size: 18px;
+}
+
+.parte1 div {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .parte1 img {
-    max-width: 500px;
+    max-width: 100%; /* Ajuste de imagen al contenedor */
     border-radius: 10%;
     height: auto;
+    max-height: 400px;
 }
 
-/* Diseño responsivo */
+/* Responsive Design */
 @media (min-width: 768px) {
     .banner {
         flex-direction: row;
         padding: 50px;
     }
-    .titulo {
-        margin: 0 20px;
+
+    .botones {
+        flex-direction: row;
+        width: auto;
     }
+
     .parte1 {
-        flex-direction: row; /* En pantallas grandes, el texto y la imagen estarán en fila */
-        align-items: flex-start; /* Alineación de los elementos al inicio para uniformidad */
-        justify-content: center; /* Centro del contenedor */
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
     .parte1 div {
-        align-items: flex-start; /* Texto alineado a la izquierda en pantallas grandes */
-    }
-
-    .parte1 a {
-        margin-left: 20px; /* Espacio entre el texto y la imagen en pantallas grandes */
+        text-align: left;
     }
 }
 
-footer {
-    background-color: #232e2a;
-    text-align: center;
-    padding: 5px 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    font-size: 14px;
-    opacity: 0.75;
-    color: #ffffff;
+@media (max-width: 576px) {
+    .banner h2 {
+        font-size: 1.2rem;
+    }
+
+    .banner p {
+        font-size: 1.5rem;
+    }
+
+    .botones a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .parte1 p {
+        font-size: 16px; /* Ajuste de tamaño de fuente */
+    }
+}
+
+/* Suaviza el desplazamiento al hacer clic en enlaces */
+html {
+    scroll-behavior: smooth;
 }
