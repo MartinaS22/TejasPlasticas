@@ -145,6 +145,10 @@ footer {
     max-height: 400px;
 }
 
+.parte1 a{
+    font-size:20px
+}
+
 /* Responsive Design */
 @media (min-width: 768px) {
     .banner {
